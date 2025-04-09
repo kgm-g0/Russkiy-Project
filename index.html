@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник: РЯ - Загрузить</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .app-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .app-title {
+            font-size: 2.5rem;
+        }
+        
+        .app-author {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+        }
+        
+        .app-content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .description {
+            margin-bottom: 30px;
+        }
+        
+        .screenshots {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+        
+        .screenshot {
+            height: 100%;
+            width: 20%;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .update-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .changelog {
+            margin-bottom: 30px;
+        }
+        
+        .changelog ul {
+            margin-left: 20px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background-color: #27ae60;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        
+        .download-btn:hover {
+            background-color: #2ecc71;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        
+        .developer-info {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+        }
+
+        .screenshots-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        @media (max-width: 768px) {
+            .app-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .screenshots {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .screenshots-container {
+                display: block;
+                width: 100%;
+            }
+            
+            .screenshot {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+
+    <script>
+        function downloadButtonOnClick() {
+                const path = 'files/base.apk';
+
+                const link = document.createElement('a');
+                link.href = path;
+
+                link.download = 'russkiy-project-v0.6.apk';
+
+                document.body.appendChild(link);
+
+                link.click();
+
+                document.body.removeChild(link);
+            }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="app-header">
+                <img src="images/icon.png" alt="Иконка приложения" class="app-icon">
+                <div>
+                    <h1 class="app-title">Справочник: Русский Язык</h1>
+                    <p class="app-author">KGM</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="app-content">
+            <section class="description">
+                <h2>Подготовка к ОГЭ без проблем</h2>
+                <p>Справочник: Русский Язык — это твой персональный репетитор для подготовки к ОГЭ!</p>
+                <p>Удобный формат — занимайся даже в дороге.</p>
+                <p>Тренировочные варианты как на реальном ОГЭ.</p>
+                <p>Готовься эффективно и уверенно иди на экзамен —</p>
+                <p>Приложение предлагает простой и понятный интерфейс и мощные функции.</p>
+            </section>
+            
+            <section class="screenshots">
+                <!--<h2>Скриншоты</h2>-->
+                <div class="screenshots-container">
+                    <img src="images/screen1.jpg" alt="Скриншот 1" class="screenshot">
+                    <img src="images/screen2.jpg" alt="Скриншот 2" class="screenshot">
+                    <img src="images/screen3.jpg" alt="Скриншот 3" class="screenshot">
+                    <img src="images/screen4.jpg" alt="Скриншот 4" class="screenshot">
+                </div>
+            </section>
+            
+            <section class="update-info">
+                <h2>Информация об обновлении</h2>
+                <p><strong>Последнее обновление:</strong> 9 апреля 2025</p>
+                <p><strong>Версия:</strong> 0.6</p>
+            </section>
+            
+            <section class="changelog">
+                <h2>Список изменений</h2>
+                <ul>
+                    <li>Изменен внешний вид главного меню</li>
+                    <li>Изменена навигация по заданиям</li>
+                    <li>Небольшие визуальные изменения в интерфейсе</li>
+                    <li>Улучшена производительность</li>
+                </ul>
+            </section>
+            
+            <a onclick="downloadButtonOnClick()" href="#dwnl" class="download-btn" id="dwnl">Загрузить приложение</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="developer-info">
+                <p>© KGM, 2025</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
